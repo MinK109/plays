@@ -1,0 +1,28 @@
+from random import randint
+computer = randint(1,100)
+      
+start = input("\033[36m" 'Hi!\nI guees the number from 1 to 100. Do you try to guess?\n-')
+start = start.lower()
+attempt = 1
+     
+while True:
+  print()
+  user = int(input("\033[37m" 'Your assumption:'))
+  if user > computer:
+    print()
+    print('My number is smaller')
+    attempt += 1
+  elif user < computer:
+    print()
+    print('My number is bigger')
+    attempt += 1
+  else:
+    print()
+    print("\033[32m" 'You are right! You gueesed my number on the',attempt,'attempts')
+    print()
+    text_cont = input("\033[37m"'Do you wanna continue?')
+    text_cont = text_cont.lower()
+    while text_cont == 'yes' or 'yep' or 'yeah':
+      continue
+      if text_cont != 'yes' or 'yep' or 'yeah':
+       break
